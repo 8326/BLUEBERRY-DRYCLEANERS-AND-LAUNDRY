@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hover Icon Menu</title>
+<style>
+  /* Basic styling for the menu container */
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 250px;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  /* Styling the buttons */
+  .nav-btn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    background-color: #f4f7fb;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  /* The image/icon container (Hidden by default) */
+  .nav-btn .icon {
+    width: 0;
+    opacity: 0;
+    margin-right: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Setting the size and color of the SVG image */
+  .nav-btn .icon svg {
+    width: 20px;
+    height: 20px;
+    fill: #0b5ed7; /* Blueberry Laundry blue */
+  }
+
+  /* WHAT HAPPENS ON HOVER */
+  .nav-btn:hover {
+    background-color: #e9f2ff;
+    border-color: #0b5ed7;
+    color: #0b5ed7;
+  }
+
+  /* Reveal the image/icon on hover */
+  .nav-btn:hover .icon {
+    width: 20px;
+    opacity: 1;
+    margin-right: 12px;
+  }
+</style>
+</head>
+<body>
+
+<div class="nav-menu">
+  
+  <!-- HOME -->
+  <a href="#" class="nav-btn">
+    <span class="icon">
+      <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    </span>
+    <span class="text">Home</span>
+  </a>
+
+  <!-- ABOUT -->
+  <a href="#" class="nav-btn">
+    <span class="icon">
+      <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+    </span>
+    <span class="text">About</span>
+  </a>
+
+  <!-- RATE LIST -->
+  <a href="#" class="nav-btn">
+    <span class="icon">
+      <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+    </span>
+    <span class="text">Rate List</span>
+  </a>
+
+  <!-- SERVICES -->
+  <a href="#" class="nav-btn">
+    <span class="icon">
+      <svg viewBox="0 0 24 24"><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.06-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.73,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.06,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 C9.71,21.59,9.91,21.76,10.16,21.76h3.84c0.24,0,0.43-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.49-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/></svg>
+    </span>
+    <span class="text">Services</span>
+  </a>
+
+  <!-- PRIVACY POLICY -->
+  <a href="#" class="nav-btn">
+    <span class="icon">
+      <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+    </span>
+    <span class="text">Privacy Policy</span>
+  </a>
+
+  <!-- TERMS AND CONDITIONS -->
+  <a href="#" class="nav-btn">
+    <span class="icon">
+      <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+    </span>
+    <span class="text">Terms & Conditions</span>
+  </a>
+
+</div>
+
+</body>
+</html>

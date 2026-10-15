@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blueberry Laundry And DryCleaners – Best Dry Cleaner in Gurgaon</title>
+<meta name="description" content="Blueberry Laundry And DryCleaners is one of the best Dry Cleaners in Gurgaon providing carpet cleaning, ladies clothes cleaning, sofa cleaning, laundering, curtain cleaning and shirt services." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<style>
+/* ── TOKENS ─────────────────────────────────────────────── */
+:root {
+  --navy:      #0B1E3D;
+  --berry:     #3B5BDB;
+  --violet:    #7048E8;
+  --cream:     #F8F6F0;
+  --slate:     #2D3A4A;
+  --gold:      #F4A300;
+  --muted:     #6B7A8D;
+  --white:     #FFFFFF;
+  --card-bg:   #FFFFFF;
+  --border:    #E2E8F0;
+
+  --grad-hero: linear-gradient(135deg, var(--navy) 0%, var(--berry) 55%, var(--violet) 100%);
+  --grad-cta:  linear-gradient(90deg, var(--berry), var(--violet));
+
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+
+  --shadow-card: 0 4px 24px rgba(11,30,61,.10);
+  --shadow-hover: 0 12px 40px rgba(59,91,219,.22);
+}
+
+/* ── RESET ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--cream);
+  color: var(--slate);
+  line-height: 1.65;
+}
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* ── UTILITY ─────────────────────────────────────────────── */
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+.section-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--berry);
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-top: 8px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  transition: opacity .2s, transform .2s;
+  cursor: pointer;
+}
+.btn:hover { opacity: .88; transform: translateY(-1px); }
+.btn-primary {
+  background: var(--grad-cta);
+  color: var(--white);
+  box-shadow: 0 4px 18px rgba(59,91,219,.35);
+}
+.btn-ghost {
+  border: 2px solid rgba(255,255,255,.6);
+  color: var(--white);
+}
+.btn-ghost:hover { background: rgba(255,255,255,.12); }
+
+/* ── TOP BAR ─────────────────────────────────────────────── */
+.topbar {
+  background: var(--navy);
+  color: rgba(255,255,255,.75);
+  font-size: 13px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.topbar .wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.topbar a { color: rgba(255,255,255,.75); transition: color .2s; }
+.topbar a:hover { color: var(--gold); }
+.topbar .fa { color: var(--gold); margin-right: 5px; }
+
+/* ── NAV ─────────────────────────────────────────────────── */
+.navbar {
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 16px rgba(11,30,61,.08);
+}
+.navbar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand-icon {
+  width: 44px; height: 44px;
+  background: var(--grad-cta);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+}
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+}
+.brand-name span { color: var(--berry); }
+.brand-sub {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: .04em;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--slate);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  transition: background .2s, color .2s;
+}
+.nav-links a:hover, .nav-links a.active {
+  background: rgba(59,91,219,.08);
+  color: var(--berry);
+}
+.nav-links a.nav-cta {
+  background: var(--grad-cta);
+  color: var(--white);
+  padding: 7px 16px;
+  border-radius: var(--radius-sm);
+}
+.nav-links a.nav-cta:hover { opacity: .88; }
+
+/* ── HERO ────────────────────────────────────────────────── */
+.hero {
+  background: var(--grad-hero);
+  position: relative;
+  overflow: hidden;
+  padding: 96px 0 80px;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 70% at 80% 40%, rgba(112,72,232,.35) 0%, transparent 70%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+/* Floating blobs */
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 420px; height: 420px;
+  background: radial-gradient(circle, rgba(244,163,0,.18) 0%, transparent 70%);
+  border-radius: 50%;
+  top: -80px; right: -80px;
+  animation: drift 8s ease-in-out infinite alternate;
+}
+@keyframes drift {
+  from { transform: translate(0,0) scale(1); }
+  to   { transform: translate(-30px,20px) scale(1.07); }
+}
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.2);
+  color: rgba(255,255,255,.9);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+.hero-eyebrow .dot {
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5.5vw, 62px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--gold);
+}
+.hero p {
+  font-size: 17px;
+  color: rgba(255,255,255,.8);
+  max-width: 520px;
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-badges {
+  margin-top: 52px;
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,.85);
+  font-size: 14px;
+}
+.badge .badge-icon {
+  width: 36px; height: 36px;
+  background: rgba(255,255,255,.12);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+/* ── SERVICES STRIP ──────────────────────────────────────── */
+.services-strip {
+  background: var(--white);
+  padding: 72px 0;
+}
+.strip-header { text-align: center; margin-bottom: 48px; }
+.strip-header p { color: var(--muted); max-width: 500px; margin: 12px auto 0; }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+.service-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+  transition: box-shadow .25s, transform .25s, border-color .25s;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--grad-cta);
+  opacity: 0;
+  transition: opacity .25s;
+}
+.service-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+  border-color: transparent;
+}
+.service-card:hover::before { opacity: 1; }
+.card-icon {
+  width: 52px; height: 52px;
+  background: rgba(59,91,219,.08);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  transition: background .25s;
+}
+.service-card:hover .card-icon {
+  background: rgba(59,91,219,.15);
+}
+.service-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+.service-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--berry);
+  transition: gap .2s;
+}
+.card-link:hover { gap: 9px; }
+
+/* ── SPECIALS ────────────────────────────────────────────── */
+.specials {
+  background: var(--navy);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+.specials::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 80% at 0% 50%, rgba(59,91,219,.25) 0%, transparent 60%);
+}
+.specials .wrap { position: relative; z-index: 1; }
+.specials .strip-header .section-label { color: var(--gold); }
+.specials .strip-header .section-title { color: var(--white); }
+.specials .strip-header p { color: rgba(255,255,255,.6); }
+.specials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+.special-card {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+  transition: background .25s, transform .25s;
+}
+.special-card:hover {
+  background: rgba(255,255,255,.1);
+  transform: translateY(-4px);
+}
+.special-icon {
+  font-size: 28px;
+  margin-bottom: 18px;
+  color: var(--gold);
+}
+.special-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.special-card p { font-size: 14px; color: rgba(255,255,255,.6); line-height: 1.65; }
+
+/* ── TESTIMONIAL ─────────────────────────────────────────── */
+.testimonials {
+  background: var(--cream);
+  padding: 80px 0;
+}
+.testimonials .strip-header { margin-bottom: 48px; }
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+.testi-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+  border: 1px solid var(--border);
+  position: relative;
+}
+.testi-card::before {
+  content: '\201C';
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+  color: var(--berry);
+  opacity: .15;
+  position: absolute;
+  top: 12px; left: 22px;
+  line-height: 1;
+}
+.testi-text { font-size: 15px; color: var(--slate); line-height: 1.7; margin-bottom: 20px; }
+.testi-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.testi-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--grad-cta);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.testi-name { font-weight: 600; font-size: 14px; color: var(--navy); }
+.testi-stars { color: var(--gold); font-size: 12px; }
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,.7);
+  padding: 64px 0 0;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.footer h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: var(--white);
+  margin-bottom: 18px;
+}
+.footer p { font-size: 14px; line-height: 1.8; }
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.footer-brand span { color: var(--gold); }
+.footer ul li { margin-bottom: 10px; }
+.footer ul a {
+  font-size: 14px;
+  color: rgba(255,255,255,.6);
+  transition: color .2s;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.footer ul a:hover { color: var(--gold); }
+.footer ul a .fa { font-size: 13px; }
+.social-links { display: flex; gap: 12px; margin-top: 18px; }
+.social-btn {
+  width: 38px; height: 38px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.07);
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,.7);
+  font-size: 16px;
+  transition: background .2s, color .2s;
+  border: 1px solid rgba(255,255,255,.1);
+}
+.social-btn:hover { background: var(--berry); color: var(--white); border-color: var(--berry); }
+.footer-map iframe {
+  border-radius: var(--radius-sm);
+  border: 0;
+  width: 100%;
+  height: 180px;
+  margin-top: 6px;
+}
+.footer-bottom {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255,255,255,.35);
+}
+.footer-bottom a { color: rgba(255,255,255,.5); }
+
+/* ── CONTACT STRIP ───────────────────────────────────────── */
+.contact-strip {
+  background: var(--grad-cta);
+  padding: 52px 0;
+}
+.contact-strip .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.contact-strip h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 3vw, 32px);
+  color: var(--white);
+}
+.contact-strip p { color: rgba(255,255,255,.8); margin-top: 6px; font-size: 15px; }
+.contact-strip .btn-ghost { border-color: rgba(255,255,255,.5); }
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .hero { padding: 64px 0 56px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .contact-strip .wrap { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── TOP BAR ──────────────────────────────────────────── -->
+<div class="topbar">
+  <div class="wrap">
+    <span><i class="fa fa-phone"></i> 0124-5058374</span>
+    <span><i class="fa fa-mobile"></i> +91-9650336417</span>
+    <span><i class="fa fa-mobile"></i> +91-9650055136</span>
+    <a href="https://www.facebook.com/profile.php?id=61591405713617" aria-label="Facebook">
+      <i class="fa fa-facebook-square" style="font-size:16px;"></i>
+    </a>
+    <a href="https://www.instagram.com/blueberry_laundry_drycleaning/" aria-label="Instagram">
+      <i class="fa fa-instagram" style="font-size:16px;"></i>
+    </a>
+  </div>
+</div>
+
+<!-- ── NAV ──────────────────────────────────────────────── -->
+<nav class="navbar">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <div class="brand-icon">🫐</div>
+      <div>
+        <div class="brand-name"><span>Blueberry</span> Laundry</div>
+        <div class="brand-sub">& Drycleaners · Gurgaon</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="branches.html">Our Branches</a>
+      <a href="ratelist.html">Rate List</a>
+      <a href="contact.html" class="nav-cta">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ─────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        Gurgaon's Trusted Dry Cleaners
+      </div>
+      <h1>Clean clothes,<br /><em>happier mornings.</em></h1>
+      <p>Expert dry cleaning, laundry, and garment care delivered with precision. From delicate wedding gowns to everyday shirts — we treat every fabric like it's our own.</p>
+      <div class="hero-btns">
+        <a href="service.html" class="btn btn-primary">Explore Services</a>
+        <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
+      </div>
+      <div class="hero-badges">
+        <div class="badge"><div class="badge-icon">👔</div> Expert garment care</div>
+        <div class="badge"><div class="badge-icon">🚚</div> Pick-up & delivery</div>
+        <div class="badge"><div class="badge-icon">✨</div> Stain guaranteed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ──────────────────────────────────────────── -->
+<section class="services-strip">
+  <div class="wrap">
+    <div class="strip-header">
+      <span class="section-label">What We Offer</span>
+      <h2 class="section-title">Garment care for every occasion</h2>
+      <p>State-of-the-art machinery paired with skilled technicians who care about the details.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="card-icon">👗</div>
+        <h3>Custom Dry Cleaning</h3>
+        <p>Each garment is individually inspected for stains, loose buttons, and open seams before expert cleaning. Delicate fabrics treated with the utmost care.</p>
+        <a href="service.html" class="card-link">Learn more <i class="fa fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card">
+        <div class="card-icon">🪟</div>
+        <h3>Curtain Cleaning</h3>
+        <p>Specialist steaming guarantees no shrinkage. Pillows, curtains and home furnishings washed with the gentlest detergents and finished to exacting standards.</p>
+        <a href="service.html" class="card-link">Learn more <i class="fa fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card">
+        <div class="card-icon">👕</div>
+        <h3>Finest Shirt Service</h3>
+        <p>Crisp, "ready to wear" results every time. Collars and cuffs precisely pressed and rolled to perfection on our state-of-the-art finishing equipment.</p>
+        <a href="service.html" class="card-link">Learn more <i class="fa fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card">
+        <div class="card-icon">🛋️</div>
+        <h3>Sofa & Carpet Cleaning</h3>
+        <p>Onsite deep cleaning for sofas, carpets, and chairs. We bring the equipment to you — no hassle, no logistics, just spotless results.</p>
+        <a href="service.html" class="card-link">Learn more <i class="fa fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card">
+        <div class="card-icon">💍</div>
+        <h3>Wedding Dress Cleaning</h3>
+        <p>The most precious garment deserves the most careful treatment. Every bead, trim, and seam is individually inspected before our expert restoration process.</p>
+        <a href="service.html" class="card-link">Learn more <i class="fa fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card">
+        <div class="card-icon">🧥</div>
+        <h3>Suits & Jackets</h3>
+        <p>Your expensive suits handled by garment care specialists using the finest international products, then gently pressed on our automatic Form Finishers.</p>
+        <a href="service.html" class="card-link">Learn more <i class="fa fa-arrow-right"></i></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SPECIALS ──────────────────────────────────────────── -->
+<section class="specials">
+  <div class="wrap">
+    <div class="strip-header" style="text-align:center; margin-bottom:0;">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-title">Service designed around you</h2>
+      <p>We go beyond the clean — convenience, care, and consistency at every step.</p>
+    </div>
+    <div class="specials-grid">
+      <div class="special-card">
+        <div class="special-icon"><i class="fa fa-truck"></i></div>
+        <h3>Home & Business Pick-up</h3>
+        <p>Convenient doorstep pick-up and delivery at a nominal cost. We promise to go beyond all your expectations — schedule once and we handle the rest.</p>
+      </div>
+      <div class="special-card">
+        <div class="special-icon"><i class="fa fa-star"></i></div>
+        <h3>Premium Garment Specialists</h3>
+        <p>Skilled technicians who understand fabrics intimately. Every item handled personally, with attention to detail that sets us apart from ordinary cleaners.</p>
+      </div>
+      <div class="special-card">
+        <div class="special-icon"><i class="fa fa-shield"></i></div>
+        <h3>Stain Removal Guarantee</h3>
+        <p>Stubborn stains pre-treated before cleaning using internationally sourced, gentle products. Your garment leaves looking its absolute best — guaranteed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ──────────────────────────────────────── -->
+<section class="testimonials">
+  <div class="wrap">
+    <div class="strip-header" style="text-align:center;">
+      <span class="section-label">Customer Stories</span>
+      <h2 class="section-title">What our customers say</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="testi-text">Good service provided by Blueberry Laundry and Drycleaners. Great work — my suits come back perfectly pressed every single time.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">L</div>
+          <div>
+            <div class="testi-name">Lakhmi Chand</div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-text">The pick-up and delivery service is incredibly convenient. They're punctual, professional, and the quality of cleaning is outstanding.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div>
+            <div class="testi-name">Ravi Sharma</div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-text">They cleaned my wedding lehenga beautifully. Every bead was intact and the fabric looked brand new. Highly recommend for bridal wear.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">P</div>
+          <div>
+            <div class="testi-name">Priya Mehta</div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT STRIP ─────────────────────────────────────── -->
+<section class="contact-strip">
+  <div class="wrap">
+    <div>
+      <h2>Ready for fresher, cleaner clothes?</h2>
+      <p>Call us or walk in — we're always happy to help.</p>
+    </div>
+    <div style="display:flex; gap:14px; flex-wrap:wrap;">
+      <a href="tel:+919650336417" class="btn" style="background:#fff; color:var(--berry); font-weight:700;">
+        <i class="fa fa-phone"></i> &nbsp;Call Now
+      </a>
+      <a href="contact.html" class="btn btn-ghost">Visit a Branch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+
+      <div>
+        <div class="footer-brand"><span>Blueberry</span> Laundry</div>
+        <p style="margin-bottom:12px;">Gurgaon's trusted dry cleaning and laundry specialist since day one. Quality you can feel, service you can count on.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=61591405713617" class="social-btn" aria-label="Facebook">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/blueberry_laundry_drycleaning/" class="social-btn" aria-label="Instagram">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Find Us</h4>
+        <p>Shop No-2, near A-55/1,<br />Behind DT Mega Mall,<br />DLF Phase I, Gurgaon – 122001,<br />Haryana, India</p>
+        <p style="margin-top:12px;"><i class="fa fa-phone" style="color:var(--gold); margin-right:6px;"></i>+91-9650336417</p>
+        <p><i class="fa fa-mobile" style="color:var(--gold); margin-right:6px;"></i>+91-9650055136</p>
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3507.1787676668782!2d77.088200575495!3d28.47416247575175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDI4JzI3LjAiTiA3N8KwMDUnMjYuOCJF!5e0!3m2!1sen!2sin!4v1782631801105!5m2!1sen!2sin"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
+        </div>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html"><i class="fa fa-chevron-right"></i> About Us</a></li>
+          <li><a href="service.html"><i class="fa fa-chevron-right"></i> Services</a></li>
+          <li><a href="branches.html"><i class="fa fa-chevron-right"></i> Our Branches</a></li>
+          <li><a href="ratelist.html"><i class="fa fa-chevron-right"></i> Rate List</a></li>
+          <li><a href="contact.html"><i class="fa fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Policies</h4>
+        <ul>
+          <li><a href="privacy.html"><i class="fa fa-chevron-right"></i> Privacy Policy</a></li>
+          <li><a href="termsAndCondition.html"><i class="fa fa-chevron-right"></i> Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      © 2025 Blueberry Laundry And DryCleaners. All rights reserved. &nbsp;|&nbsp; Designed by Prince Moriya
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
